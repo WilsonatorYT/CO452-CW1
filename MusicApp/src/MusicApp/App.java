@@ -117,7 +117,7 @@ public class App {
             }
 
             // Get the song name from the arguments
-            String songName = args[1];
+            String songName = args[1].replace("\"", ""); // Remove quotes
 
             // Call the method to find the song
             Song song = findSongByName(songName);
@@ -144,7 +144,7 @@ public class App {
             }
 
             // Get the song name from the arguments
-            String songName = args[1];
+            String songName = args[1].replace("\"", ""); // Remove quotes
 
             // Get the song object
             Song song = findSongByName(songName);
