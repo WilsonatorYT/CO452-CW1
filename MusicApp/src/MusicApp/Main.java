@@ -14,9 +14,10 @@ public class Main {
     }
 
     /**
-     * Moved to a separate method to prevent it from taking up space in the main method
+     * Registers all commands to the console system.
      */
     private static void registerCommands() {
+        // Register the help command
         ConsoleSystem.registerCommand("help", "Lists all of the commands and what they do, or information about a specific command.", (args) -> {
             // if the user has specified a command, print the command's description
             if (args.length == 1) {
@@ -33,8 +34,12 @@ public class Main {
                 System.out.println(command.getName() + " - " + command.getDescription());
             }
         });
+
+        // Register the exit command
         ConsoleSystem.registerCommand("exit", "Exits the application.", (args) -> {
             ConsoleSystem.exit();
         });
+
+
     }
 }
