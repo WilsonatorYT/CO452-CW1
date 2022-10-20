@@ -170,7 +170,7 @@ public class App {
             // If there is no artist argument, just print all the songs
             if (args.length == 1) {
                 // Loop through all the artists and their songs
-                artists.forEach(artist -> getAllSongs().forEach(song -> {
+                artists.forEach(artist -> artist.getSongs().forEach(song -> {
                     System.out.println(song.getName() + " by " + artist.getName() + " (" + song.getNumberOfPlays() + " plays)");
                 }));
             }
