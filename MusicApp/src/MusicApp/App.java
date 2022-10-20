@@ -12,7 +12,7 @@ public class App {
     /**
      * The list of artists
      */
-    private ArrayList<Artist> artists = new ArrayList<>();
+    private final ArrayList<Artist> artists = new ArrayList<>();
 
     /**
      * Constructor, which adds all the artists to the application
@@ -62,7 +62,7 @@ public class App {
             // Create variables to hold song and artist data
             String artistName = null;
             String songName;
-            Song song = null;
+            Song song;
             Artist artist = null;
 
             if (args.length == 2) {
