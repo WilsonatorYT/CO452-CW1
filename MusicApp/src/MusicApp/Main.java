@@ -9,6 +9,9 @@ public class Main {
         // Register commands to the console system
         registerCommands();
 
+        // Create the music application
+        App musicApp = new App();
+
         // Start the console system
         ConsoleSystem.start();
     }

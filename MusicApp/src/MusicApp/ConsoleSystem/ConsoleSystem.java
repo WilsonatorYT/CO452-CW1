@@ -33,6 +33,7 @@ public class ConsoleSystem {
         // Store the user's input
         String input = "";
 
+        // Display a welcome message
         System.out.println("Welcome to the Music Application!");
         System.out.println("*********************************");
         System.out.println("Type 'help' to get a list of commands");
