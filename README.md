@@ -90,3 +90,27 @@ given artist’s songs.
 I’ve also added the `find_popular_songs` command, which does the same as above but filters the 
 song list based on the given number of plays argument (only those that are equal or above the number 
 of plays).
+
+### Testing
+This section will mainly just have a few screenshots of the program running.
+
+#### 1.	Help Command
+![img.png](Screenshots/helpcommand.png)
+
+#### 2.	Add Song Command, showing handling of missing arguments
+![img.png](Screenshots/add_song.png)
+
+#### 3. Find Songs Command, showing all songs
+![img.png](Screenshots/findsongs.png)
+
+#### 4. Find Songs Command, showing songs by a specific artist
+![img.png](Screenshots/findsongs_specific.png)
+
+#### 5. Find Popular Songs Command, showing songs with more than 7000 plays
+![img.png](Screenshots/findpopular.png)
+
+#### 6. Play Song Command, showing the play count before and after
+![img.png](Screenshots/playsong.png)
+
+#### 7. Find Song Command, showing the Levenshtein Distance search (spelling mistake)
+![img.png](Screenshots/levenshtein.png)
