@@ -4,6 +4,8 @@ import MusicApp.helpers.InputReader;
 
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ConsoleSystem {
     /**
@@ -44,16 +46,21 @@ public class ConsoleSystem {
             // Get the console input, and check if it's a registered command
             input = InputReader.getString("");
 
-            // First, split the input into an array of strings (split by spaces)
-            String[] inputArray = input.split(" ");
+            // Stores the arguments of the command
+            ArrayList<String> inputArray= new ArrayList<>();
+
+            // First, find any quoted arguments using regex
+            Matcher matcher = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(input);
+            while(matcher.find()) // Find each argument, and add it to the list
+                inputArray.add(matcher.group(1));
 
             // Then, get the first string in the array (the command)
-            String command = inputArray[0];
+            String command = inputArray.get(0);
 
             // Check if the command is registered
             if(commands.containsKey(command)) {
                 // If it is, run the command
-                commands.get(command).getAction().accept(inputArray);
+                commands.get(command).getAction().accept(inputArray.toArray(new String[0]));
             } else {
                 // If it isn't, print an error message
                 System.out.println("Command not found!");
