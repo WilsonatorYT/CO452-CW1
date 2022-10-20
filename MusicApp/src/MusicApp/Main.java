@@ -15,7 +15,7 @@ public class Main {
     }
 
     /**
-     * Registers all commands to the console system.
+     * Registers basic commands to the console system
      */
     private static void registerCommands() {
         // Register the help command
