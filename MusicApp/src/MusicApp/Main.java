@@ -1,8 +1,6 @@
 package MusicApp;
-import MusicApp.ConsoleSystem.ConsoleSystem;
 
-import java.util.Map;
-import java.util.function.Consumer;
+import MusicApp.ConsoleSystem.ConsoleSystem;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,7 +40,5 @@ public class Main {
         ConsoleSystem.registerCommand("exit", "Exits the application.", (args) -> {
             ConsoleSystem.exit();
         });
-
-
     }
 }
