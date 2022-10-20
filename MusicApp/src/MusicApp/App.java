@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
  * The application class, which stores all the Songs, Artists, etc. And functions to manipulate them
  */
 public class App {
+    /**
+     * The list of artists
+     */
     private ArrayList<Artist> artists = new ArrayList<>();
 
     /**
